@@ -10,7 +10,6 @@ module.exports = {
     watch: false,
     max_memory_restart: '1G',
   }],
-
   deploy: {
     production: {
       user: 'ubuntu',
@@ -18,7 +17,7 @@ module.exports = {
       key: '~/.ssh/id_rsa .pem',
       ref: 'origin/master',
       repo: 'https://github.com/SquishyRock/timingServer.git',
-      path: '/home/ubuntu/timingServer',
+      path: '/ubuntu/timingServer',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
