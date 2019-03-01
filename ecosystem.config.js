@@ -12,9 +12,9 @@ module.exports = {
   }],
   deploy: {
     production: {
+      key: '~/.ssh/id_rsa.pem',
       user: 'ubuntu',
       host: 'ec2-34-216-180-39.us-west-2.compute.amazonaws.com',
-      key: '~/.ssh/id_rsa .pem',
       ref: 'origin/master',
       repo: 'https://github.com/SquishyRock/timingServer.git',
       path: '/ubuntu/timingServer',
