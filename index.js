@@ -39,7 +39,7 @@ app.post('/reset', (req, res) => {
   res.send('Reset successful');
 });
 
-app.listen(8080, () => {
+app.listen(3000, () => {
   console.log('express listening on: Port 8080');
 });
 

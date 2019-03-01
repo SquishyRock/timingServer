@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'Timing Server',
-    script: 'index.js',
+    script: './index.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
@@ -15,6 +15,9 @@ module.exports = {
       key: '~/.ssh/id_rsa.pem',
       user: 'ubuntu',
       host: 'ec2-34-216-180-39.us-west-2.compute.amazonaws.com',
+      ssh_options: [
+        'Port=3000',
+      ],
       ref: 'origin/master',
       repo: 'https://github.com/SquishyRock/timingServer.git',
       path: '/ubuntu/timingServer',
